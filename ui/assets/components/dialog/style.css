@@ -1,0 +1,112 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+dialog {
+    --max-width: 80ch;
+    --viewport-margin-block: max(2rem, env(safe-area-inset-top), env(safe-area-inset-bottom));
+    --viewport-margin-inline: max(2rem, env(safe-area-inset-left), env(safe-area-inset-right));
+
+    padding: 0;
+    border-radius: var(--card-border-radius);
+    background: #FFFFFF;
+    overflow: hidden;
+    box-shadow: var(--shadow-huge);
+    border: none;
+    width: calc(100vw - 2 * var(--viewport-margin-inline));
+    max-height: calc(100vh - 2 * var(--viewport-margin-block));
+    max-width: calc(var(--max-width) + var(--card-padding) * 2);
+    display: flex;
+    flex-direction: column;
+}
+
+dialog:not([open]) {
+    display: none;
+}
+
+::backdrop {
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, .25);
+}
+
+.alt-backdrop::backdrop {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background-color: rgba(128, 128, 128, .75);
+}
+
+:host::part(header),
+:host::part(footer) {
+    flex: 0 0 auto;
+}
+
+:host::part(header) {
+    display: grid;
+    grid: auto / var(--card-close-button-size) 1fr var(--card-close-button-size);
+    gap: 1rem;
+    grid-template-areas: '. heading button';
+    place-items: center;
+    color: #000000;
+    border-bottom: 1px solid currentcolor;
+}
+
+:host::part(heading) {
+    grid-area: heading;
+    margin: 0;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.btn-close {
+    all: unset;
+    grid-area: button;
+    display: inline-grid;
+    place-content: center;
+    align-self: start;
+    width: var(--card-close-button-size);
+    height: var(--card-close-button-size);
+    cursor: pointer;
+}
+
+.btn-close:hover,
+.btn-close:focus {
+    outline: none;
+}
+
+.btn-close:focus {
+    background: #000000;
+    color: #FFFFFF;
+}
+
+.btn-close svg {
+    width: 1rem;
+    height: 1rem;
+    transition: transform var(--transition-duration) ease-out;
+}
+
+.btn-close:hover svg {
+    transform: scale(1.1);
+}
+
+:host::part(content) {
+    flex: 1 1 auto;
+    overflow: auto;
+    padding: var(--card-padding);
+}
+
+:host::part(footer) {
+    padding: var(--card-padding);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: flex-end;
+    gap: var(--card-padding);
+}
+
+:host(.dialog--alt-submit-button)::part(confirm-button) {
+    --btn-bg-color: var(--green);
+    --btn-bg-color-hover: var(--green-dark);
+}

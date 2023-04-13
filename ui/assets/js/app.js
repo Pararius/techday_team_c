@@ -13,7 +13,7 @@ form.addEventListener('submit', (event) => {
     if (!description || endpoint === window.location.href) {
         return;
     }
-  console.log(JSON.stringify({description}))
+
     overlay.hidden = false;
     abortController = new AbortController();
     fetch(endpoint, {
@@ -51,7 +51,17 @@ const overlayStatus = () => {
         'Tokenizing thingamajigs',
         'Parsing description',
         'Taking a break',
-    ]
+        'Accessing the mainframe',
+        'Generating response',
+        'Telling the interns to hurry',
+        'Taking a sip of coffee',
+        'Typing as fast as I can',
+        'Making you wait because I can',
+        'Burning the evidence',
+        'Cleaning up after myself',
+        'Any moment now',
+        'SIKE! Still letting you wait',
+    ];
 
     let currentIndex;
 
@@ -63,7 +73,7 @@ const overlayStatus = () => {
         }
         currentIndex = i;
         statusContainer.innerText = `${messages[currentIndex]}...`;
-    }, 1000);
+    }, 5000);
 }
 
 overlayStatus();
