@@ -321,7 +321,7 @@
   },
   "listing": {
     "rent": {
-      "available": null,
+      "available": true,
       "price_on_request": false,
       "price": "235000",
       "period": "monthly",
@@ -329,28 +329,28 @@
       "interior": {
         "type": "upholstered",
         "partially_uphostered": null,
-        "optionally_furnished": false,
-        "costs_upholstery": null,
-        "costs_furnishing": null
+        "optionally_furnished": true,
+        "costs_upholstery": "2000",
+        "costs_furnishing": "10000"
       },
       "additional_costs": {
         "included": true,
         "utility_costs": {
-          "costs_per_month": null,
-          "gas": false,
-          "water": false,
-          "electricity": false
+          "costs_per_month": "14500",
+          "gas": true,
+          "water": true,
+          "electricity": true
         },
         "service_costs": {
-          "costs_per_month": null,
-          "internet": false,
+          "costs_per_month": "500",
+          "internet": true,
           "tv": false,
           "other": false
         }
       },
       "contract": {
         "temporary": false,
-        "minimum_duration": null,
+        "minimum_duration": 12,
         "maximum_duration": null,
         "vat_taxed": false,
         "yearly_indexed": false,
@@ -366,14 +366,16 @@
             "period": null
           }
         },
-        "pets_allowed": null,
-        "smoking_allowed": null,
+        "pets_allowed": false,
+        "smoking_allowed": false,
         "sharing_possible": false
       },
       "tenant_requirements": {
-        "monthly_income": null,
-        "occupational_statuses": [],
-        "maximum_number_of_tenants": null
+        "monthly_income": "400000",
+        "occupational_statuses": [
+          "employed"
+        ],
+        "maximum_number_of_tenants": 2
       }
     },
     "sale": null,
@@ -429,7 +431,7 @@
         },
         "main_media_id": "a6e3d2e8-eb9d-532d-8682-0e4918c96ea6"
       },
-      "presentation_360": null,
+      "presentation_360": "https://api.zien24.nl/tools/orders/123456/preview/360/567890",
       "floor_plans": {
         "updated_on": null,
         "medias": {
@@ -447,9 +449,25 @@
       },
       "documents": {
         "updated_on": null,
-        "medias": []
+        "medias": [
+          {
+            "071f9352-f186-54a1-8bbb-8afd924d85df": {
+              "file": {
+                "filename": "perm://53173781.1656000074-12.pdf",
+                "mime_type": "application/pdf",
+                "modified_on": "2022-06-24 11:21:17"
+              },
+              "title": null,
+              "media_id": "071f9352-f186-54a1-8bbb-8afd924d85df",
+              "position": 1
+            }
+          }
+        ]
       },
-      "video": null
+      "video": {
+        "source": "youtube",
+        "reference": "7bwTJ5Z0akU"
+      }
     }
   }
 }
