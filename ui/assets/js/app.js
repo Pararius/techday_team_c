@@ -1,112 +1,4 @@
-
-const form = document.forms[0];
-const overlay = document.querySelector('.overlay');
-let abortController;
-
-const showResponse = (string) => {
-    document.querySelector('code').innerText = string;
-}
-
-const generateForm = (string) => {
-  const dialog = document.querySelector('dialog');
-  const form = document.createElement('form');
-  form.className = 'output-form';
-  const obj = JSON.parse(string.split('---')[0]);
-  for (const [key, {label, value}] of Object.entries(obj)) {
-    form.insertAdjacentHTML('beforeend',`
-      <div class="form-row">
-        <label for="${key}">${label}</label>
-        <input type="text" id="${key}" value="${value || ''}">
-      </div>
-    `);
-  }
-  dialog.innerHTML = '';
-  dialog.insertAdjacentElement('afterbegin', form);
-  dialog.showModal();
-}
-form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const endpoint  = event.target.action;
-    const description = document.getElementById('input')?.value?.trim();
-    if (!description || endpoint === window.location.href) {
-        return;
-    }
-
-    overlay.hidden = false;
-    abortController = new AbortController();
-    fetch(endpoint, {
-        signal: abortController.signal,
-        method: 'POST',
-        headers: {
-          'X-Requested-With': 'XMLHttpRequest',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({description}),
-    })
-        .then(res => res.text())
-        .then(txt => {
-            showResponse(txt);
-        })
-        .catch(err => {
-            console.error(err);
-        })
-        .finally(() => {
-            overlay.hidden = true;
-        })
-})
-
-const pickIndex = (array) => Math.floor(Math.random() * array.length);
-
-const overlayStatus = () => {
-    const messages = [
-        'G\'ing the PT',
-        'Waiting',
-        'Thinking',
-        'Pondering',
-        'Taking over jobs',
-        'Secretly reading your emails',
-        'Asking a guy I went to school with',
-        'Tokenizing thingamajigs',
-        'Parsing description',
-        'Taking a break',
-        'Accessing the mainframe',
-        'Generating response',
-        'Telling the interns to hurry',
-        'Taking a sip of coffee',
-        'Typing as fast as I can',
-        'Making you wait because I can',
-        'Burning the evidence',
-        'Cleaning up after myself',
-        'Any moment now',
-        'SIKE! Still letting you wait',
-    ];
-
-    let currentIndex;
-
-    const statusContainer = document.querySelector('.status');
-    setInterval(() => {
-        let i = pickIndex(messages);
-        while (i === currentIndex) {
-            i = pickIndex(messages);
-        }
-        currentIndex = i;
-        statusContainer.innerText = `${messages[currentIndex]}...`;
-    }, 5000);
-}
-
-overlayStatus();
-
-window.addEventListener('keydown', ({key}) => {
-    if (key !== 'Escape' || !abortController) {
-        return;
-    }
-
-    abortController.abort();
-
-
-}, {passive: true});
-
-const json = `
+const fakeResponse = `
 {
   "rentalPrice": {
     "label": "Huurprijs",
@@ -205,19 +97,119 @@ Naast de prachtige natuur en historische bezienswaardigheden, biedt de omgeving 
 Wat betreft het openbaar vervoer in de buurt van De Schans in Giessenlanden zijn er diverse mogelijkheden. Er zijn verschillende buslijnen die door de regio rijden en u naar omliggende steden en dorpen kunnen brengen, zoals Gorinchem, Dordrecht en Rotterdam. Daarnaast is er een treinstation in het nabijgelegen Hardinxveld-Giessendam, waarvandaan u eenvoudig naar grotere steden als Utrecht en Amsterdam kunt reizen.
 
 In de omgeving van De Schans in Giessenlanden zijn er diverse scholen en supermarkten te vinden. Er zijn zowel basisscholen als middelbare scholen in de nabije omgeving, waardoor het een geschikte locatie is voor gezinnen met kinderen. Wat betreft supermarkten zijn er verschillende opties beschikbaar, zoals een Albert Heijn, Jumbo en Lidl, waar u terecht kunt voor uw dagelijkse boodschappen.
-
-
-
-
-
-
-
-
-
-
-
-
-
 `;
 
-generateForm(json);
+
+
+const form = document.forms[0];
+const overlay = document.querySelector('.overlay');
+let abortController;
+
+const showResponse = (string) => {
+    document.querySelector('code').innerText = string;
+}
+
+const generateForm = (string) => {
+  const dialog = document.querySelector('dialog');
+  const form = document.createElement('form');
+  form.className = 'output-form';
+  const obj = JSON.parse(string.split('---')[0]);
+  for (const [key, {label, value}] of Object.entries(obj)) {
+    form.insertAdjacentHTML('beforeend',`
+      <div class="form-row">
+        <label for="${key}">${label}</label>
+        <input type="text" id="${key}" value="${value || ''}">
+      </div>
+    `);
+  }
+  dialog.innerHTML = '';
+  dialog.insertAdjacentElement('afterbegin', form);
+  dialog.showModal();
+}
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const endpoint  = event.target.action;
+    const description = document.getElementById('input')?.value?.trim();
+    if (!description || endpoint === window.location.href) {
+        return;
+    }
+
+    overlay.hidden = false;
+    /*
+    abortController = new AbortController();
+    fetch(endpoint, {
+        signal: abortController.signal,
+        method: 'POST',
+        headers: {
+          'X-Requested-With': 'XMLHttpRequest',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({description}),
+    })
+     */
+    new Promise(resolve => {
+      setTimeout(() => resolve(fakeResponse), 12000);
+    })
+        // .then(res => res.text())
+        .then(txt => {
+            showResponse(txt);
+            generateForm(txt);
+        })
+        .catch(err => {
+            console.error(err);
+        })
+        .finally(() => {
+            overlay.hidden = true;
+        })
+})
+
+const pickIndex = (array) => Math.floor(Math.random() * array.length);
+
+const overlayStatus = () => {
+    const messages = [
+        'G\'ing the PT',
+        'Waiting',
+        'Thinking',
+        'Pondering',
+        'Taking over jobs',
+        'Secretly reading your emails',
+        'Asking a guy I went to school with',
+        'Tokenizing thingamajigs',
+        'Parsing description',
+        'Taking a break',
+        'Accessing the mainframe',
+        'Generating response',
+        'Telling the interns to hurry',
+        'Taking a sip of coffee',
+        'Typing as fast as I can',
+        'Making you wait because I can',
+        'Burning the evidence',
+        'Cleaning up after myself',
+        'Any moment now',
+        'SIKE! Still letting you wait',
+    ];
+
+    let currentIndex;
+
+    const statusContainer = document.querySelector('.status');
+    setInterval(() => {
+        let i = pickIndex(messages);
+        while (i === currentIndex) {
+            i = pickIndex(messages);
+        }
+        currentIndex = i;
+        statusContainer.innerText = `${messages[currentIndex]}...`;
+    }, 5000);
+}
+
+overlayStatus();
+
+window.addEventListener('keydown', ({key}) => {
+    if (key !== 'Escape' || !abortController) {
+        return;
+    }
+
+    abortController.abort();
+
+
+}, {passive: true});
