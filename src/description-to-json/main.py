@@ -9,10 +9,6 @@ PROMPT = """
 Extract all the information needed for the response from the following text in dutch:
 Respond with this JSON structure and if there are no results give 'na' as a return for strings:
     {
-    "Plaats": str,
-    "Straat": str,
-    "Huisnummer": str,
-    "Postcode": str,
     "Huurprijs (zonder euro sign)": int,
     "Aangeboden sinds wanneer? (annotatie in D-M-2023)": str,
     "Is de woning verhuurd of te huur?": str,
@@ -61,11 +57,14 @@ def get_features_from_description(prompt: str) -> str:
     openai.api_key = gpt_api_key
 
     # Call openai to get stuff from description
-    completion = openai.Completion.create(
-        model="gpt-3.5-turbo",
-        prompt=prompt,
+    completion = openai.ChatCompletion.create(
+        model="gpt-4",
+        messages=[
+            {"role": "system", "content": "You are a helpful real estate agent"},
+            {"role": "user", "content": prompt},
+        ],
         temperature=0.4,
-        max_tokens=1024,
+        max_tokens=4096,
         frequency_penalty=0,
         presence_penalty=0,
     )
@@ -74,10 +73,7 @@ def get_features_from_description(prompt: str) -> str:
     # print(completion.choices[0].text)
     print(completion)
 
-    if completion.choices[0].text is None:
-        return "{}"
-    else:
-        return completion.choices[0].text
+    return completion.choices[0].message.content
 
 
 def run(request_json: dict):
@@ -109,19 +105,19 @@ def handler(request):
         # header and caches preflight response for an 3600s
         headers = {
             "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "GET",
-            "Access-Control-Allow-Headers": "Content-Type",
+            "Access-Control-Allow-Methods": "GET,HEAD,OPTIONS,POST,PUT",
+            "Access-Control-Allow-Headers": "Access-Control-Allow-Headers, Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers",
             "Access-Control-Max-Age": "3600",
         }
 
-        return ("", 204, headers)
+        return "", 204, headers
 
     # Set CORS headers for the main request
     headers = {"Access-Control-Allow-Origin": "*"}
 
     request_json = request.get_json(silent=True) or {}
 
-    return (run(request_json), 200, headers)
+    return run(request_json), 200, headers
 
 
 if "__main__" in __name__:
