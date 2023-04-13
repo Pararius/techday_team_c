@@ -5,33 +5,107 @@ import functions_framework
 
 GOOGLE_PROJECT_ID = "techday-team-c"
 
-PROMPT = """
-Respond with this JSON structure and if there are no results give 'na' as a return for strings:
-    {
-    "Huurprijs (zonder euro sign)": int,
-    "Aangeboden sinds wanneer? (annotatie in D-M-2023)": str,
-    "Is de woning verhuurd of te huur?": str,
-    "Per waneer beschikbaar? (annotatie in D-M-2023)": str,
-    "Huurovereenkomst:": str,
-    "Looptijd (onbepaalde tijd of tijdelijke verhuur):": str,
-    "Interieur (gemeubileerd, kaal, gestoffeerd):": str,
-    "Woonoppervlakte (in m2):": str,
-    "Type woning (appartement, huis):": str,
-    "Soort bouw (bestaande bouw of nieuwbouw)": str,
-    "Aantal kamers": int,
-    "Aantal slaapkamers": int,
-    "Aantal badkamers": int,
-    "Balkon aanwezig? ja/nee": str,
-    "Tuin aanwezig? ja/nee": str,
-    "Douche aanwezig? ja/nee": str,
-    "Toilet aanwezig? ja/nee": str,
-    "Energielabel": str,
-    "Bergruimte aanwezig? ja/nee": str,
-    "Schuur/Berging aanwezig? ja/nee": str,
-    "Parkeergelegenheid aanwezig? ja/nee": str,
-    "Garage aanwezig? ja/nee": str  
-    }
+FEATURES_JSON_PROMPT = """
+Respond with this JSON structure and if there are no results give null as a return for strings:
+{
+  "rentalPrice": {
+    "label": "Huurprijs",
+    "value": "12.34"
+  },
+  "availableSince": {
+    "label": "Aangeboden sinds",
+    "value": "DD-MM-YYYY"
+  },
+  "availability": {
+    "label": "Beschikbaarheid",
+    "options": ["Te huur", "Verhuurd"],
+    "value":""
+  },
+  "surfaceArea": {
+    "label": "Woonoppervlakte m2",
+    "value": "123"
+  },
+  "numRooms": {
+    "label": "Aantal kamers",
+    "value": "2"
+  },
+  "numBedrooms": {
+    "label": "Aantal slaapkamers",
+    "value": "2"
+  },
+  "numBathrooms": {
+    "label": "Aantal badkamers",
+    "value": "2"
+  },
+  "energyLabel": {
+    "label": "Energielabel",
+    "value": "A"
+  },
+  "balcony": {
+    "label": "Balkon aanwezig",
+    "options": ["Ja", "Nee", null],
+    "value":""
+  },
+  "garden": {
+    "label": "Tuin aanwezig",
+    "options": ["Ja", "Nee", null],
+    "value":""
+  },
+  "shower": {
+    "label": "Douche aanwezig",
+    "options": ["Ja", "Nee", null],
+    "value":""
+  },
+  "toilet": {
+    "label": "Toilet aanwezig",
+    "options": ["Ja", "Nee", null],
+    "value":""
+  },
+  "storage": {
+    "label": "Bergruimte aanwezig",
+    "options": ["Ja", "Nee", null],
+    "value":""
+  },
+  "shed": {
+    "label": "Schuur aanwezig",
+    "options": ["Ja", "Nee", null],
+    "value":""
+  },
+  "garage": {
+    "label": "Garage aanwezig",
+    "options": ["Ja", "Nee", null],
+    "value":""
+  },
+  "parking": {
+    "label": "Parkeerruimte aanwezig",
+    "options": ["Ja", "Nee", null],
+    "value":""
+  },
+  "buildingType": {
+    "label": "Soort bouw",
+    "options": ["Bestaande bouw", "Nieuwbouw", null],
+    "value":""
+  },
+  "interior": {
+    "label": "Interieur",
+    "options": ["Gemeubileerd", "Gestoffeerd", "Kaal", null],
+    "value":""
+  },
+  "apartmentOrHouse": {
+    "label": "Type woning",
+    "options": ["Appartement", "Huis", null],
+    "value":""
+  },
+}
 Extract all the information needed for the response from the following text:    
+"""
+
+DESCRIPTION_PROMPT = """
+{original_description}
+{feature_list}
+Maak van bovenstaande kenmerken een nuttige beschrijving voor een woningzoeker.
+
+Tell me in Dutch about highlights near {address} in a fluent text of two paragraphs. Consider a few iterations of the text first, before sending the response. Let the text have an informative character. Next to this, also tell me about the public transport possibilities in the neighbourhood in a separate paragraph. Also add in a short description the possibilities for schools and supermarkets in a separate paragraph.
 """
 
 
@@ -50,7 +124,7 @@ class SecretManager:
         return response.payload.data.decode("UTF-8")
 
 
-def get_features_from_description(prompt: str) -> str:
+def call_gpt(prompt: str) -> str:
     # Get API key from Secret Manager
     sm = SecretManager(GOOGLE_PROJECT_ID)
     gpt_api_key = sm.get("gpt-api-key")
@@ -80,22 +154,32 @@ def run(request_json: dict):
     if "description" not in request_json:
         return "No description in request", 400
 
-    prompt = PROMPT
+    if "address" not in request_json:
+        return "No address in request", 400
+
+    features_prompt = FEATURES_JSON_PROMPT
     if "prompt" not in request_json:
         print("No prompt provided, using default")
     else:
-        prompt = request_json["prompt"]
+        features_prompt = request_json["prompt"]
 
-    print(f'Starting with description: {request_json["description"][0:150]}')
+    # print(f'Starting with description: {request_json["description"][0:150]}')
 
-    listing_data = get_features_from_description(
-        prompt=prompt + request_json["description"]
+    listing_features = call_gpt(prompt=features_prompt + request_json["description"])
+
+    listing_description = call_gpt(
+        prompt=DESCRIPTION_PROMPT.format(
+            original_description=request_json["description"],
+            feature_list=listing_features,
+            address=request_json["address"],
+        )
     )
 
     print("Result:")
-    print(listing_data)
+    print(listing_features)
+    print(listing_description)
 
-    return listing_data
+    return listing_features
 
 
 @functions_framework.http
@@ -155,6 +239,7 @@ Bijzonderheden
 - Inclusief servicekosten en WIFI
 - Gas, water en licht €150,- per maand
 - Ingang huur 1 november 2023 tot 31 augustus 2024
-    """
+    """,
+            "address": "De Schans in Giessenlanden in Zuid-Holland",
         }
     )

@@ -55,7 +55,7 @@ resource "google_cloudfunctions_function" "descr-to-json-function" {
   service_account_email = google_service_account.cloud_function_runner.email
 
   available_memory_mb   = 512
-  timeout               = 240
+  timeout               = 540
   source_archive_bucket = google_storage_bucket.code-bucket.name
   source_archive_object = google_storage_bucket_object.descr-to-json-archive.name
   trigger_http          = true
