@@ -1,1 +1,3 @@
-# techday_team_c
+# TechDay Team C
+
+Awesome AI project
