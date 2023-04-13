@@ -1,6 +1,7 @@
 import openai
 import json
 from google.cloud import secretmanager
+import functions_framework
 
 GOOGLE_PROJECT_ID = "techday-team-c"
 
@@ -98,13 +99,29 @@ def run(request_json: dict):
     print("Result:")
     print(listing_data)
 
-    return listing_data, 200
+    return listing_data
 
 
+@functions_framework.http
 def handler(request):
+    if request.method == "OPTIONS":
+        # Allows GET requests from any origin with the Content-Type
+        # header and caches preflight response for an 3600s
+        headers = {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET",
+            "Access-Control-Allow-Headers": "Content-Type",
+            "Access-Control-Max-Age": "3600",
+        }
+
+        return ("", 204, headers)
+
+    # Set CORS headers for the main request
+    headers = {"Access-Control-Allow-Origin": "*"}
+
     request_json = request.get_json(silent=True) or {}
 
-    return run(request_json)
+    return (run(request_json), 200, headers)
 
 
 if "__main__" in __name__:
