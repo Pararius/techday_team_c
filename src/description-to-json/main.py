@@ -62,7 +62,7 @@ def get_features_from_description(prompt: str) -> str:
 
     # Call openai to get stuff from description
     completion = openai.Completion.create(
-        model="text-davinci-003",
+        model="gpt-3.5-turbo",
         prompt=prompt,
         temperature=0.4,
         max_tokens=1024,
