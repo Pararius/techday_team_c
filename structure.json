@@ -1,0 +1,1067 @@
+{
+  "address": {
+    "country": "NL",
+    "postal_code": "4837EL",
+    "house_number": {
+      "number": 80,
+      "suffix": null
+    },
+    "components": {
+      "district": "Breda zuid",
+      "province": "Noord-Brabant",
+      "neighbourhood": "Ruitersbos"
+    },
+    "city": "Breda",
+    "street": "Mozartlaan",
+    "coordinates": {
+      "latitude": 51.571056221,
+      "longitude": 4.761920103
+    },
+    "exact": true,
+    "code": "0758200000067862",
+    "is_manual": false
+  },
+  "property": {
+    "property_type": "apartment",
+    "address": {
+      "country": "NL",
+      "postal_code": "4837EL",
+      "house_number": {
+        "number": 80,
+        "suffix": null
+      },
+      "components": {
+        "district": "Breda zuid",
+        "province": "Noord-Brabant",
+        "neighbourhood": "Ruitersbos"
+      },
+      "city": "Breda",
+      "street": "Mozartlaan",
+      "coordinates": {
+        "latitude": 51.571056221,
+        "longitude": 4.761920103
+      },
+      "exact": true,
+      "code": "0758200000067862",
+      "is_manual": false
+    },
+    "construction_year": 1975,
+    "function": "residential",
+    "building_form": "existing_build",
+    "measurements": {
+      "surface_area_livable": 145,
+      "surface_area_other": null,
+      "surface_area_building_related_outdoor": 25,
+      "surface_area_external_storage": 63,
+      "surface_area_total": 233,
+      "plot_size": null,
+      "volume": 460
+    },
+    "situations": [
+      "at calm road",
+      "in wooded area",
+      "near public transport",
+      "sheltered position",
+      "unobstructed view"
+    ],
+    "specifics": [
+      "accessible for seniors"
+    ],
+    "parkings": [
+      "bicycle",
+      "public"
+    ],
+    "maintenance": {
+      "interior": "good",
+      "exterior": "good"
+    },
+    "roof": {
+      "type": "flat",
+      "materials": [
+        "bitumen"
+      ]
+    },
+    "layout": {
+      "floors": 1
+    },
+    "facilities": [
+      "elevator"
+    ],
+    "kitchens": [
+      {
+        "dimensions": {
+          "length": null,
+          "width": null,
+          "surface_area": null
+        },
+        "installation_year": null,
+        "type": "closed",
+        "facilities": [
+          "built-in appliances"
+        ],
+        "cooktop_type": null
+      }
+    ],
+    "living_rooms": [
+      {
+        "dimensions": {
+          "length": null,
+          "width": null,
+          "surface_area": null
+        },
+        "has_stairs": false,
+        "living_room_shape": null,
+        "living_room_characteristics": []
+      },
+      {
+        "dimensions": {
+          "length": null,
+          "width": null,
+          "surface_area": null
+        },
+        "has_stairs": false,
+        "living_room_shape": null,
+        "living_room_characteristics": []
+      }
+    ],
+    "gardens": [
+      {
+        "main": true,
+        "type": null,
+        "orientation": null,
+        "dimensions": {
+          "length": null,
+          "width": null,
+          "surface_area": 350000
+        },
+        "quality": "regular",
+        "features": [
+          "terrace"
+        ],
+        "back_entrance": false
+      }
+    ],
+    "balconies": [
+      {
+        "orientation": null,
+        "length": null,
+        "width": null,
+        "surface_area": null
+      }
+    ],
+    "roof_terraces": [
+      {
+        "orientation": null,
+        "length": null,
+        "width": null,
+        "surface_area": null
+      }
+    ],
+    "storages": [
+      {
+        "placement": "indoor",
+        "material": null,
+        "insulations": [],
+        "features": [],
+        "length": null,
+        "width": null,
+        "surface_area": null
+      }
+    ],
+    "energy": {
+      "label": {
+        "class": "c",
+        "status": null,
+        "performance": null,
+        "index": null,
+        "expiration_date": null
+      },
+      "insulations": [],
+      "heatings": [],
+      "water_heatings": [],
+      "ventilations": [],
+      "generators": [],
+      "central_heating_boiler": {
+        "construction_year": null,
+        "make": null,
+        "fuel": null,
+        "combination_boiler": null,
+        "property": null
+      }
+    },
+    "commercial_property_spaces": [],
+    "garages": [
+      {
+        "type": "garage unit",
+        "car_capacity": 1,
+        "dimensions": {
+          "length": null,
+          "width": null,
+          "surface_area": null
+        },
+        "insulations": [],
+        "facilities": []
+      }
+    ],
+    "bathrooms": [
+      {
+        "dimensions": {
+          "length": null,
+          "width": null,
+          "surface_area": null
+        },
+        "facilities": [
+          "toilet",
+          "walk in shower"
+        ]
+      }
+    ],
+    "bedrooms": [
+      {
+        "dimensions": {
+          "length": null,
+          "width": null,
+          "surface_area": null
+        },
+        "suitable_as_bedroom": true
+      },
+      {
+        "dimensions": {
+          "length": null,
+          "width": null,
+          "surface_area": null
+        },
+        "suitable_as_bedroom": true
+      }
+    ],
+    "inform_obligations": [],
+    "property_valuation": {
+      "amount": null,
+      "valuated_at": null
+    },
+    "parcels": [
+      {
+        "cadastral_information": {
+          "scope": null,
+          "ownership": null,
+          "section_code": null,
+          "share": null,
+          "municipality": null,
+          "municipality_code": null,
+          "index_number": null,
+          "parcel_number": null,
+          "surface_area": null
+        },
+        "ground_lease": {
+          "annual_costs": null,
+          "duration": null,
+          "supplier": null,
+          "bought_off_until": null,
+          "end_date": null,
+          "options": []
+        }
+      }
+    ],
+    "homeowners_association": {
+      "status": null,
+      "administrator": null,
+      "monthly_contribution": null,
+      "chamber_of_commerce_registration": false,
+      "periodic_contribution": false,
+      "maintenance_plan": false,
+      "meetings": false,
+      "reserve_fund": false,
+      "home_insurance": false
+    },
+    "other_spaces": [
+      "scullery",
+      "toilet",
+      "wash place"
+    ],
+    "municipal_registration_allowed": true,
+    "permanent_residency_allowed": true,
+    "type": "porch flat",
+    "characteristic": "apartment",
+    "floor_number": 6,
+    "number_of_stories": null,
+    "porch": {
+      "type": "closed",
+      "mailbox": null,
+      "doorbell_panel": null,
+      "intercom": null
+    }
+  },
+  "listing": {
+    "rent": {
+      "available": null,
+      "price_on_request": false,
+      "price": "235000",
+      "period": "monthly",
+      "deposit": "235000",
+      "interior": {
+        "type": "upholstered",
+        "partially_uphostered": null,
+        "optionally_furnished": false,
+        "costs_upholstery": null,
+        "costs_furnishing": null
+      },
+      "additional_costs": {
+        "included": true,
+        "utility_costs": {
+          "costs_per_month": null,
+          "gas": false,
+          "water": false,
+          "electricity": false
+        },
+        "service_costs": {
+          "costs_per_month": null,
+          "internet": false,
+          "tv": false,
+          "other": false
+        }
+      },
+      "contract": {
+        "temporary": false,
+        "minimum_duration": null,
+        "maximum_duration": null,
+        "vat_taxed": false,
+        "yearly_indexed": false,
+        "maximum_yearly_indexation": null,
+        "availability": {
+          "status": "to rent",
+          "type": "per date",
+          "available_from": "2022-06-01",
+          "reservation": {
+            "reservation_from": null,
+            "reservation_until": null,
+            "price": null,
+            "period": null
+          }
+        },
+        "pets_allowed": null,
+        "smoking_allowed": null,
+        "sharing_possible": false
+      },
+      "tenant_requirements": {
+        "monthly_income": null,
+        "occupational_statuses": [],
+        "maximum_number_of_tenants": null
+      }
+    },
+    "sale": null,
+    "short_stay": null,
+    "room_mates": null,
+    "signup_reason": "went up for rent",
+    "descriptions": {
+      "pararius": {
+        "nl": "Gerenoveerd en zeer royaal appartement ca. 145m2, met balkon en terras van ca. 63m2 op het zuiden. Het appartement is gelegen op de 6de verdieping van een complex in villawijk Ruitersbos, nabij diverse winkels, Mastbos en Ginnekenmarkt. Het appartement beschikt over veel lichtinval en en heeft een eigen garage en berging op de begane grond.\nEntree, gang met apart toilet, garderobe en toegang tot het terras, een woonkamer ca. 55m2 met toegang tot balkon, een aparte semi-open woonkeuken ca. 24m2 voorzien van alle apparatuur en kastenwand, slaapkamer ca. 17m2 met toegang badkamer van ca. 8m2 met inloopdouche, ligbad en wastafel, een slaapkamer ca. 12m2 en een waskamer annex bijkeuken ca. 5m2.",
+        "en": "Zeer Royaal appartement ca. 145m2, met balkon en terras van ca. 63m2 op het zuiden. Het appartement is gelegen op de 6de verdieping van een complex in villawijk Ruitersbos, nabij diverse winkels, Mastbos en Ginnekenmarkt. Het appartement beschikt over veel lichtinval en en heeft een inpandige garage en berging op de begane grond.\nEntree, gang met apart toilet, garderobe en toegang tot het terras, een woonkamer ca. 55m2 met toegang tot balkon, een aparte keuken voorzien van apparatuur, slaapkamer ca. 17m2 met toegang badkamer van ca. 8m2 met inloopdouche, ligbad en wastafel, een slaapkamer ca. 12m2 en een waskamer annex bijkeuken ca. 5m2.\nHet appartement is recent gerenoveerd en voorzien van nieuwe houten vloer."
+      },
+      "own_site": {
+        "nl": "Gerenoveerd en zeer royaal appartement ca. 145m2, met balkon en terras van ca. 63m2 op het zuiden. Het appartement is gelegen op de 6de verdieping van een complex in villawijk Ruitersbos, nabij diverse winkels, Mastbos en Ginnekenmarkt. Het appartement beschikt over veel lichtinval en en heeft een eigen garage en berging op de begane grond.\nEntree, gang met apart toilet, garderobe en toegang tot het terras, een woonkamer ca. 55m2 met toegang tot balkon, een aparte semi-open woonkeuken ca. 24m2 voorzien van alle apparatuur en kastenwand, slaapkamer ca. 17m2 met toegang badkamer van ca. 8m2 met inloopdouche, ligbad en wastafel, een slaapkamer ca. 12m2 en een waskamer annex bijkeuken ca. 5m2.",
+        "en": null
+      },
+      "tiara": {
+        "nl": "Gerenoveerd en zeer royaal appartement ca. 145m2, met balkon en terras van ca. 63m2 op het zuiden. Het appartement is gelegen op de 6de verdieping van een complex in villawijk Ruitersbos, nabij diverse winkels, Mastbos en Ginnekenmarkt. Het appartement beschikt over veel lichtinval en en heeft een eigen garage en berging op de begane grond.\nEntree, gang met apart toilet, garderobe en toegang tot het terras, een woonkamer ca. 55m2 met toegang tot balkon, een aparte semi-open woonkeuken ca. 24m2 voorzien van alle apparatuur en kastenwand, slaapkamer ca. 17m2 met toegang badkamer van ca. 8m2 met inloopdouche, ligbad en wastafel, een slaapkamer ca. 12m2 en een waskamer annex bijkeuken ca. 5m2.",
+        "en": null
+      },
+      "brochure": {
+        "nl": "Gerenoveerd en zeer royaal appartement ca. 145m2, met balkon en terras van ca. 63m2 op het zuiden. Het appartement is gelegen op de 6de verdieping van een complex in villawijk Ruitersbos, nabij diverse winkels, Mastbos en Ginnekenmarkt. Het appartement beschikt over veel lichtinval en en heeft een eigen garage en berging op de begane grond.\nEntree, gang met apart toilet, garderobe en toegang tot het terras, een woonkamer ca. 55m2 met toegang tot balkon, een aparte semi-open woonkeuken ca. 24m2 voorzien van alle apparatuur en kastenwand, slaapkamer ca. 17m2 met toegang badkamer van ca. 8m2 met inloopdouche, ligbad en wastafel, een slaapkamer ca. 12m2 en een waskamer annex bijkeuken ca. 5m2.",
+        "en": null
+      },
+      "window_leaflet": {
+        "nl": "Gerenoveerd en zeer royaal appartement ca. 145m2, met balkon en terras van ca. 63m2 op het zuiden. Het appartement is gelegen op de 6de verdieping van een complex in villawijk Ruitersbos, nabij diverse winkels, Mastbos en Ginnekenmarkt. Het appartement beschikt over veel lichtinval en en heeft een eigen garage en berging op de begane grond.\nEntree, gang met apart toilet, garderobe en toegang tot het terras, een woonkamer ca. 55m2 met toegang tot balkon, een aparte semi-open woonkeuken ca. 24m2 voorzien van alle apparatuur en kastenwand, slaapkamer ca. 17m2 met toegang badkamer van ca. 8m2 met inloopdouche, ligbad en wastafel, een slaapkamer ca. 12m2 en een waskamer annex bijkeuken ca. 5m2.",
+        "en": null
+      }
+    },
+    "media_set": {
+      "photos": {
+        "updated_on": null,
+        "medias": {
+          "000daf52-e66e-5bb5-a247-d1d1dde1579f": {
+            "media_id": "000daf52-e66e-5bb5-a247-d1d1dde1579f",
+            "position": 43,
+            "file": {
+              "filename": "perm:\/\/52849678.1632384021-57.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "09b5e508-9737-526b-9346-68ba1b519201": {
+            "media_id": "09b5e508-9737-526b-9346-68ba1b519201",
+            "position": 64,
+            "file": {
+              "filename": "perm:\/\/52849678.1632384075-454.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:32"
+            },
+            "title": null
+          },
+          "0d895cae-a2fe-5bdb-9a8f-d300e391c283": {
+            "media_id": "0d895cae-a2fe-5bdb-9a8f-d300e391c283",
+            "position": 7,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383916-969.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "0f041aeb-e02b-5178-ba42-de0122e695cf": {
+            "media_id": "0f041aeb-e02b-5178-ba42-de0122e695cf",
+            "position": 44,
+            "file": {
+              "filename": "perm:\/\/52849678.1632384024-857.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "0fd9d557-48c9-5284-8404-564d798b00ce": {
+            "media_id": "0fd9d557-48c9-5284-8404-564d798b00ce",
+            "position": 10,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383923-873.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "138dee3f-4c78-5aa6-a64a-bed8f4c08d0c": {
+            "media_id": "138dee3f-4c78-5aa6-a64a-bed8f4c08d0c",
+            "position": 57,
+            "file": {
+              "filename": "perm:\/\/52849678.1632384061-209.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:32"
+            },
+            "title": null
+          },
+          "13e57d5e-a00b-59b7-bce8-469e42f85183": {
+            "media_id": "13e57d5e-a00b-59b7-bce8-469e42f85183",
+            "position": 51,
+            "file": {
+              "filename": "perm:\/\/52849678.1632384046-911.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:32"
+            },
+            "title": null
+          },
+          "1c674cd0-776c-5796-abb6-3db7d4bb727f": {
+            "media_id": "1c674cd0-776c-5796-abb6-3db7d4bb727f",
+            "position": 59,
+            "file": {
+              "filename": "perm:\/\/52849678.1632384065-591.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:32"
+            },
+            "title": null
+          },
+          "216bdf69-7996-5c50-b418-3ad34b8fde23": {
+            "media_id": "216bdf69-7996-5c50-b418-3ad34b8fde23",
+            "position": 31,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383982-776.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "236421e3-ee9b-59e5-a26b-887e5f4c6e30": {
+            "media_id": "236421e3-ee9b-59e5-a26b-887e5f4c6e30",
+            "position": 22,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383960-344.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "23917a31-f776-5a29-aed8-027beb10fa8f": {
+            "media_id": "23917a31-f776-5a29-aed8-027beb10fa8f",
+            "position": 42,
+            "file": {
+              "filename": "perm:\/\/52849678.1637225004-283.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "261fb3e5-8f30-5d30-97ad-64a5ad222248": {
+            "media_id": "261fb3e5-8f30-5d30-97ad-64a5ad222248",
+            "position": 12,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383927-581.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "2af946b7-68ea-51ff-9b51-19cb8cb832f8": {
+            "media_id": "2af946b7-68ea-51ff-9b51-19cb8cb832f8",
+            "position": 39,
+            "file": {
+              "filename": "perm:\/\/52849678.1637225001-8.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "2b3b5f42-9756-5a83-8dd5-903f29bbb24d": {
+            "media_id": "2b3b5f42-9756-5a83-8dd5-903f29bbb24d",
+            "position": 56,
+            "file": {
+              "filename": "perm:\/\/52849678.1632384058-420.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:32"
+            },
+            "title": null
+          },
+          "2ee4c47c-b736-51d2-940d-9768e9a76208": {
+            "media_id": "2ee4c47c-b736-51d2-940d-9768e9a76208",
+            "position": 45,
+            "file": {
+              "filename": "perm:\/\/52849678.1632384027-645.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "4417afcf-1540-5ff3-bbff-28e695ffb1a9": {
+            "media_id": "4417afcf-1540-5ff3-bbff-28e695ffb1a9",
+            "position": 66,
+            "file": {
+              "filename": "perm:\/\/52849678.1632384079-637.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:32"
+            },
+            "title": null
+          },
+          "46fbb8e8-da09-50c1-bd29-05c6692b2788": {
+            "media_id": "46fbb8e8-da09-50c1-bd29-05c6692b2788",
+            "position": 13,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383930-276.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "4cbe5ee5-c6c9-5cb4-810a-b0fb2a176816": {
+            "media_id": "4cbe5ee5-c6c9-5cb4-810a-b0fb2a176816",
+            "position": 30,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383980-963.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "4e56c9f4-d2da-555c-a72d-7456bd51659a": {
+            "media_id": "4e56c9f4-d2da-555c-a72d-7456bd51659a",
+            "position": 54,
+            "file": {
+              "filename": "perm:\/\/52849678.1632384052-851.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:32"
+            },
+            "title": null
+          },
+          "4f9fe0d6-5fe7-5062-b45d-70bbaab4aedf": {
+            "media_id": "4f9fe0d6-5fe7-5062-b45d-70bbaab4aedf",
+            "position": 2,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383945-168.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "530398ec-5144-532a-a3a5-af33f4a0b556": {
+            "media_id": "530398ec-5144-532a-a3a5-af33f4a0b556",
+            "position": 6,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383914-347.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "5a62e469-647a-5904-a165-ddd242e409ec": {
+            "media_id": "5a62e469-647a-5904-a165-ddd242e409ec",
+            "position": 58,
+            "file": {
+              "filename": "perm:\/\/52849678.1632384063-168.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:32"
+            },
+            "title": null
+          },
+          "5b6d1648-7e6c-59da-b2fd-63652f1f2d46": {
+            "media_id": "5b6d1648-7e6c-59da-b2fd-63652f1f2d46",
+            "position": 41,
+            "file": {
+              "filename": "perm:\/\/52849678.1637225002-716.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "5c03edd3-e298-58ae-9cda-1d2eb6dec0df": {
+            "media_id": "5c03edd3-e298-58ae-9cda-1d2eb6dec0df",
+            "position": 15,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383934-232.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "60565508-399d-5380-8b64-8b9131df72db": {
+            "media_id": "60565508-399d-5380-8b64-8b9131df72db",
+            "position": 49,
+            "file": {
+              "filename": "perm:\/\/52849678.1632384041-26.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:32"
+            },
+            "title": null
+          },
+          "6b5d9f0d-c356-5715-b0dd-31907b498080": {
+            "media_id": "6b5d9f0d-c356-5715-b0dd-31907b498080",
+            "position": 25,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383967-641.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "6c03aca3-8cff-5fc6-8d88-7d329d396978": {
+            "media_id": "6c03aca3-8cff-5fc6-8d88-7d329d396978",
+            "position": 17,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383939-23.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "6cd63adc-68cc-5d50-9db9-f8852e3bf5ba": {
+            "media_id": "6cd63adc-68cc-5d50-9db9-f8852e3bf5ba",
+            "position": 50,
+            "file": {
+              "filename": "perm:\/\/52849678.1632384043-326.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:32"
+            },
+            "title": null
+          },
+          "6f3521df-6b1c-5a37-8a68-f7eb20420147": {
+            "media_id": "6f3521df-6b1c-5a37-8a68-f7eb20420147",
+            "position": 29,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383978-189.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "75779972-b5e7-5ec5-8915-7439830f2dbd": {
+            "media_id": "75779972-b5e7-5ec5-8915-7439830f2dbd",
+            "position": 38,
+            "file": {
+              "filename": "perm:\/\/52849678.1632384001-604.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "76c3f9c8-3261-51fc-be65-d3d89ee7c149": {
+            "media_id": "76c3f9c8-3261-51fc-be65-d3d89ee7c149",
+            "position": 48,
+            "file": {
+              "filename": "perm:\/\/52849678.1632384037-798.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:32"
+            },
+            "title": null
+          },
+          "7bcb9872-7d6d-575f-9961-54d097cac334": {
+            "media_id": "7bcb9872-7d6d-575f-9961-54d097cac334",
+            "position": 40,
+            "file": {
+              "filename": "perm:\/\/52849678.1637225004-100.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "7c648d2e-9ea0-5402-a06c-fd94cf4e6142": {
+            "media_id": "7c648d2e-9ea0-5402-a06c-fd94cf4e6142",
+            "position": 8,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383918-360.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "7ce3d8dc-397d-5ce4-a5a6-67b48d9fdcd1": {
+            "media_id": "7ce3d8dc-397d-5ce4-a5a6-67b48d9fdcd1",
+            "position": 18,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383942-229.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "7dda0992-830f-5ab2-bc62-6d83458e09f2": {
+            "media_id": "7dda0992-830f-5ab2-bc62-6d83458e09f2",
+            "position": 21,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383956-610.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "802a857e-0f52-54fc-bfa7-a00f386d5c78": {
+            "media_id": "802a857e-0f52-54fc-bfa7-a00f386d5c78",
+            "position": 28,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383976-800.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "8482c166-397a-5570-913e-de6b2a0f49a8": {
+            "media_id": "8482c166-397a-5570-913e-de6b2a0f49a8",
+            "position": 3,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383950-377.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "89bd2e26-fc28-5333-adc0-50a07796a127": {
+            "media_id": "89bd2e26-fc28-5333-adc0-50a07796a127",
+            "position": 63,
+            "file": {
+              "filename": "perm:\/\/52849678.1632384073-417.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:32"
+            },
+            "title": null
+          },
+          "8a3a3910-d496-570a-9852-6bec0f4a0b92": {
+            "media_id": "8a3a3910-d496-570a-9852-6bec0f4a0b92",
+            "position": 36,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383995-690.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "8ac451de-3cad-5380-8ae0-9dce07435de6": {
+            "media_id": "8ac451de-3cad-5380-8ae0-9dce07435de6",
+            "position": 32,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383984-283.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "8b9042e2-5df3-54a1-8b32-86b5ea3c62d1": {
+            "media_id": "8b9042e2-5df3-54a1-8b32-86b5ea3c62d1",
+            "position": 24,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383965-956.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "8fcfe76b-e20a-50c1-8b5a-729e5a3874d9": {
+            "media_id": "8fcfe76b-e20a-50c1-8b5a-729e5a3874d9",
+            "position": 16,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383936-689.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "92670062-65f3-562d-9d8f-d54beae7f393": {
+            "media_id": "92670062-65f3-562d-9d8f-d54beae7f393",
+            "position": 19,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383947-929.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "92bcdc2f-062a-5443-9cc0-1ede5773d612": {
+            "media_id": "92bcdc2f-062a-5443-9cc0-1ede5773d612",
+            "position": 34,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383988-422.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "95c371b7-0516-55cd-8f04-ac090f9c6db1": {
+            "media_id": "95c371b7-0516-55cd-8f04-ac090f9c6db1",
+            "position": 55,
+            "file": {
+              "filename": "perm:\/\/52849678.1632384056-623.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:32"
+            },
+            "title": null
+          },
+          "981b88ab-2c9a-596a-8fe2-fef69ae6ac1a": {
+            "media_id": "981b88ab-2c9a-596a-8fe2-fef69ae6ac1a",
+            "position": 37,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383997-511.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "9e3247ad-d232-5220-ac51-0bc7eed21c19": {
+            "media_id": "9e3247ad-d232-5220-ac51-0bc7eed21c19",
+            "position": 5,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383973-557.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "9f995d3f-2118-5f61-ac20-f7583482d8fd": {
+            "media_id": "9f995d3f-2118-5f61-ac20-f7583482d8fd",
+            "position": 4,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383954-694.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "a5450823-d2b0-50ae-b310-c65229273bb0": {
+            "media_id": "a5450823-d2b0-50ae-b310-c65229273bb0",
+            "position": 61,
+            "file": {
+              "filename": "perm:\/\/52849678.1632384069-725.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:32"
+            },
+            "title": null
+          },
+          "a6e3d2e8-eb9d-532d-8682-0e4918c96ea6": {
+            "media_id": "a6e3d2e8-eb9d-532d-8682-0e4918c96ea6",
+            "position": 1,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383910-96.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "b0f7ac22-cadf-5ee2-a692-1280c35452cf": {
+            "media_id": "b0f7ac22-cadf-5ee2-a692-1280c35452cf",
+            "position": 9,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383920-470.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "b796af44-a720-593f-85e1-94601db28f58": {
+            "media_id": "b796af44-a720-593f-85e1-94601db28f58",
+            "position": 53,
+            "file": {
+              "filename": "perm:\/\/52849678.1632384050-275.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:32"
+            },
+            "title": null
+          },
+          "b87995bd-2b3e-5486-a067-d896198075fa": {
+            "media_id": "b87995bd-2b3e-5486-a067-d896198075fa",
+            "position": 47,
+            "file": {
+              "filename": "perm:\/\/52849678.1632384034-121.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:32"
+            },
+            "title": null
+          },
+          "bbd5adc3-64b8-545f-9063-d15dc1f4e0f2": {
+            "media_id": "bbd5adc3-64b8-545f-9063-d15dc1f4e0f2",
+            "position": 35,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383991-786.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "bca63a75-9d64-56f5-980b-703812e43c64": {
+            "media_id": "bca63a75-9d64-56f5-980b-703812e43c64",
+            "position": 23,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383962-121.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "bddca816-1186-59e7-924b-c54e0a7be41b": {
+            "media_id": "bddca816-1186-59e7-924b-c54e0a7be41b",
+            "position": 11,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383925-717.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "c22bd715-3efb-55d9-8bd3-1c872c6bd34e": {
+            "media_id": "c22bd715-3efb-55d9-8bd3-1c872c6bd34e",
+            "position": 60,
+            "file": {
+              "filename": "perm:\/\/52849678.1632384067-907.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:32"
+            },
+            "title": null
+          },
+          "c7e87c51-39a7-52c2-ab2c-ba4097d604d8": {
+            "media_id": "c7e87c51-39a7-52c2-ab2c-ba4097d604d8",
+            "position": 46,
+            "file": {
+              "filename": "perm:\/\/52849678.1632384030-383.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:32"
+            },
+            "title": null
+          },
+          "cd47a38b-6747-5158-9de2-a44fd8d8d04d": {
+            "media_id": "cd47a38b-6747-5158-9de2-a44fd8d8d04d",
+            "position": 62,
+            "file": {
+              "filename": "perm:\/\/52849678.1632384071-776.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:32"
+            },
+            "title": null
+          },
+          "d2e39995-8f6c-5ad3-b9a6-48ab07e241ed": {
+            "media_id": "d2e39995-8f6c-5ad3-b9a6-48ab07e241ed",
+            "position": 20,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383952-841.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "d64f6b66-da6e-5b5a-be0e-7886b347c523": {
+            "media_id": "d64f6b66-da6e-5b5a-be0e-7886b347c523",
+            "position": 65,
+            "file": {
+              "filename": "perm:\/\/52849678.1632384077-353.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:32"
+            },
+            "title": null
+          },
+          "ebe78043-7a9e-51e2-9988-0cfffb1638a2": {
+            "media_id": "ebe78043-7a9e-51e2-9988-0cfffb1638a2",
+            "position": 33,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383986-983.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "edb8c7b7-83b8-5999-affc-db7aea1bd472": {
+            "media_id": "edb8c7b7-83b8-5999-affc-db7aea1bd472",
+            "position": 27,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383971-210.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "f2ab827b-2be4-570f-b19b-4556b9598b14": {
+            "media_id": "f2ab827b-2be4-570f-b19b-4556b9598b14",
+            "position": 52,
+            "file": {
+              "filename": "perm:\/\/52849678.1632384048-687.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:32"
+            },
+            "title": null
+          },
+          "fafdfb1b-36a0-5fbd-bdf9-f5689bb53f8f": {
+            "media_id": "fafdfb1b-36a0-5fbd-bdf9-f5689bb53f8f",
+            "position": 26,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383969-616.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          },
+          "fd65bbe8-faa6-53eb-aeaa-a099df87216a": {
+            "media_id": "fd65bbe8-faa6-53eb-aeaa-a099df87216a",
+            "position": 14,
+            "file": {
+              "filename": "perm:\/\/52849678.1632383932-966.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:31"
+            },
+            "title": null
+          }
+        },
+        "main_media_id": "a6e3d2e8-eb9d-532d-8682-0e4918c96ea6"
+      },
+      "presentation_360": null,
+      "floor_plans": {
+        "updated_on": null,
+        "medias": {
+          "3978197e-f945-51f0-9900-088469481dca": {
+            "media_id": "3978197e-f945-51f0-9900-088469481dca",
+            "position": 1,
+            "file": {
+              "filename": "perm:\/\/52849678.1632384207-406.jpg",
+              "mime_type": "image\/jpeg",
+              "modified_on": "2022-05-17 12:40:32"
+            },
+            "title": null
+          }
+        }
+      },
+      "documents": {
+        "updated_on": null,
+        "medias": []
+      },
+      "video": null
+    }
+  }
+}
