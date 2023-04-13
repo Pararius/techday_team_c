@@ -39,10 +39,18 @@
           "type": "integer"
         },
         "function": {
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "recreational",
+            "residential"
+          ]
         },
         "building_form": {
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "existing_build",
+            "newly_built"
+          ]
         },
         "measurements": {
           "type": "object",
@@ -83,19 +91,63 @@
         "situations": {
           "type": "array",
           "items": {
-            "type": "string"
+            "type": "string",
+            "enum": [
+              "at business park",
+              "at busy road",
+              "at calm road",
+              "at navigable waterway",
+              "beside forest",
+              "by park",
+              "by water",
+              "in center",
+              "in residential area",
+              "in rural area",
+              "in wooded area",
+              "near airport",
+              "near public transport",
+              "near school",
+              "near sea",
+              "near shopping center",
+              "open position",
+              "outside built-up area",
+              "peripheral",
+              "sheltered position",
+              "unobstructed view"
+            ]
           }
         },
         "specifics": {
           "type": "array",
           "items": {
-            "type": "string"
+            "type": "string",
+            "enum": [
+              "accessible for disabled people",
+              "accessible for seniors",
+              "demolition house",
+              "double occupancy possible",
+              "double occupancy present",
+              "fixer upper",
+              "heritage",
+              "monumental building",
+              "partially rented",
+              "protected townscape"
+            ]
           }
         },
         "parkings": {
           "type": "array",
           "items": {
-            "type": "string"
+            "type": "string",
+            "enum": [
+              "bicycle",
+              "enclosed terrain",
+              "garage",
+              "paid",
+              "permit",
+              "private terrain",
+              "public"
+            ]
           }
         },
         "maintenance": {
@@ -103,10 +155,24 @@
           "additionalProperties": false,
           "properties": {
             "interior": {
-              "type": "string"
+              "type": "string",
+              "enum": [
+                "excellent",
+                "good",
+                "reasonable",
+                "moderate",
+                "bad"
+              ]
             },
             "exterior": {
-              "type": "string"
+              "type": "string",
+              "enum": [
+                "excellent",
+                "good",
+                "reasonable",
+                "moderate",
+                "bad"
+              ]
             }
           },
           "required": [
