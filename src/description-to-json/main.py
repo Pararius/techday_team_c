@@ -39,7 +39,7 @@ Extract all the information needed for the response from the following text:
 """
 
 
-def get_features_from_description(prompt: str) -> dict:
+def get_features_from_description(prompt: str) -> str:
     # Get API key from Secret Manager
     sm = SecretManager(GOOGLE_PROJECT_ID)
     gpt_api_key = sm.get("gpt-api-key")
@@ -51,14 +51,12 @@ def get_features_from_description(prompt: str) -> dict:
     # print the completion
     print(completion.choices[0].text)
 
-    result = json.loads(completion.choices[0].text)
+    # result = json.loads(completion.choices[0].text)
 
-    return result
+    return completion.choices[0].text
 
 
-def handler(request):
-    request_json = request.get_json(silent=True) or {}
-
+def run(request_json: dict):
     if "description" not in request_json:
         return "No description in request", 400
 
@@ -77,4 +75,14 @@ def handler(request):
     print("Result:")
     print(listing_data)
 
-    return json.dumps(listing_data), 200
+    return listing_data, 200
+
+
+def handler(request):
+    request_json = request.get_json(silent=True) or {}
+
+    return run(request_json)
+
+
+if "__main__" in __name__:
+    run({"description": "test"})
