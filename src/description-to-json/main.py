@@ -179,7 +179,7 @@ def run(request_json: dict):
     print(listing_features)
     print(listing_description)
 
-    return listing_features
+    return listing_features + "\n---\n" + listing_description
 
 
 @functions_framework.http
