@@ -200,7 +200,16 @@
             "materials": {
               "type": "array",
               "items": {
-                "type": "string"
+                "type": "string",
+                "enum": [
+                  "asbestos",
+                  "bitumen",
+                  "metal",
+                  "slate",
+                  "synthetic",
+                  "thatched",
+                  "tiles"
+                ]
               }
             }
           },
@@ -224,7 +233,27 @@
         "facilities": {
           "type": "array",
           "items": {
-            "type": "string"
+            "type": "string",
+            "enum": [
+              "alarm installation",
+              "cable tv",
+              "cctv",
+              "elevator",
+              "fiber optic cable",
+              "french balcony",
+              "home automation",
+              "intercom",
+              "internet connection",
+              "outdoor awning",
+              "rolldown shutters",
+              "roller blinds",
+              "satellite antenna",
+              "sewer connection",
+              "skylight",
+              "sliding door",
+              "storage room",
+              "swimming pool"
+            ]
           }
         },
         "kitchens": {
@@ -240,16 +269,39 @@
                 "type": "integer"
               },
               "type": {
-                "type": "string"
+                "type": "string",
+                "enum": [
+                  "closed",
+                  "eat-in",
+                  "open",
+                  "semi-open"
+                ]
               },
               "facilities": {
                 "type": "array",
                 "items": {
-                  "type": "string"
+                  "type": "string",
+                  "enum": [
+                    "built-in appliances",
+                    "combi microwave",
+                    "dishwasher",
+                    "extractor hood",
+                    "freezer",
+                    "fridge",
+                    "kitchen island",
+                    "microwave",
+                    "oven"
+                  ]
                 }
               },
               "cooktop_type": {
-                "type": "string"
+                "type": "string",
+                "enum": [
+                  "ceramic",
+                  "electric",
+                  "gas",
+                  "induction"
+                ]
               }
             },
             "required": [
