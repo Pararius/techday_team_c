@@ -2,7 +2,7 @@ const fakeResponse = `
 {
   "rentalPrice": {
     "label": "Huurprijs",
-    "value": null
+    "value": "1600"
   },
   "availableSince": {
     "label": "Aangeboden sinds",

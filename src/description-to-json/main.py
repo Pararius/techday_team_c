@@ -240,6 +240,6 @@ Bijzonderheden
 - Gas, water en licht €150,- per maand
 - Ingang huur 1 november 2023 tot 31 augustus 2024
     """,
-            "address": "De Schans in Giessenlanden in Zuid-Holland",
+            "address": "Mosterdsteeg in Alkmaar in Noord-Holland",
         }
     )
