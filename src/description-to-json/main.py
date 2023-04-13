@@ -6,7 +6,6 @@ import functions_framework
 GOOGLE_PROJECT_ID = "techday-team-c"
 
 PROMPT = """
-Extract all the information needed for the response from the following text in dutch:
 Respond with this JSON structure and if there are no results give 'na' as a return for strings:
     {
     "Huurprijs (zonder euro sign)": int,
@@ -32,6 +31,7 @@ Respond with this JSON structure and if there are no results give 'na' as a retu
     "Parkeergelegenheid aanwezig? ja/nee": str,
     "Garage aanwezig? ja/nee": str  
     }
+Extract all the information needed for the response from the following text:    
 """
 
 
@@ -64,7 +64,7 @@ def get_features_from_description(prompt: str) -> str:
             {"role": "user", "content": prompt},
         ],
         temperature=0.4,
-        max_tokens=4096,
+        max_tokens=1024,
         frequency_penalty=0,
         presence_penalty=0,
     )
@@ -110,14 +110,18 @@ def handler(request):
             "Access-Control-Max-Age": "3600",
         }
 
-        return "", 204, headers
+        return ("Success", 204, headers)
 
     # Set CORS headers for the main request
     headers = {"Access-Control-Allow-Origin": "*"}
 
     request_json = request.get_json(silent=True) or {}
 
-    return run(request_json), 200, headers
+    response = run(request_json)
+
+    # response = json.dumps(json.loads(run(request_json)))
+
+    return (response, 200, headers)
 
 
 if "__main__" in __name__:
