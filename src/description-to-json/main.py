@@ -1,6 +1,6 @@
 import openai
 import json
-from treehouse.security import SecretManager
+from google.cloud import secretmanager
 
 GOOGLE_PROJECT_ID = "techday-team-c"
 
@@ -36,6 +36,21 @@ Respond with this JSON structure and if there are no results give 'na' as a retu
     "Garage aanwezig? ja/nee": str  
     }
 """
+
+
+class SecretManager:
+    def __init__(
+        self, project_id: str, client=secretmanager.SecretManagerServiceClient()
+    ):
+        self.project_id = project_id
+        self.client = client
+
+    def get(self, name: str):
+        response = self.client.access_secret_version(
+            {"name": f"projects/{self.project_id}/secrets/{name}/versions/latest"}
+        )
+
+        return response.payload.data.decode("UTF-8")
 
 
 def get_features_from_description(prompt: str) -> str:

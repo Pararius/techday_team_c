@@ -1,2 +1,2 @@
 openai
-git+https://github.com/pararius/platform-tools
+google-cloud-secretmanager
