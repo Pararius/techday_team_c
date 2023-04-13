@@ -44,7 +44,7 @@ label {
     font-weight: bold;
 }
 
-form {
+form:not(.output-form) {
     display: grid;
     grid: auto 1fr auto auto/1fr;
     gap: var(--p);
@@ -125,4 +125,24 @@ textarea,
     pointer-events: none;
     background: transparent;
     backdrop-filter: none;
+}
+
+dialog {
+  padding: var(--p);
+}
+
+.output-form {
+  min-width: 45ch;
+  display: grid;
+  grid: auto / auto 1fr;
+  gap: 1rem 1ch;
+}
+
+.form-row {
+  display: contents;
+}
+
+.form-row input {
+  font-size: 1rem;
+  padding: .5ch;
 }
