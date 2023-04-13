@@ -1,37 +1,15 @@
 import openai
 import json
 from google.cloud import secretmanager
+from pathlib import Path
 import functions_framework
 
 GOOGLE_PROJECT_ID = "techday-team-c"
 
 PROMPT = """
 Extract all the information needed for the response from the following text in dutch:
-Respond with this JSON structure and if there are no results give 'na' as a return for strings:
-    {
-    "Huurprijs (zonder euro sign)": int,
-    "Aangeboden sinds wanneer? (annotatie in D-M-2023)": str,
-    "Is de woning verhuurd of te huur?": str,
-    "Per waneer beschikbaar? (annotatie in D-M-2023)": str,
-    "Huurovereenkomst:": str,
-    "Looptijd (onbepaalde tijd of tijdelijke verhuur):": str,
-    "Interieur (gemeubileerd, kaal, gestoffeerd):": str,
-    "Woonoppervlakte (in m2):": str,
-    "Type woning (appartement, huis):": str,
-    "Soort bouw (bestaande bouw of nieuwbouw)": str,
-    "Aantal kamers": int,
-    "Aantal slaapkamers": int,
-    "Aantal badkamers": int,
-    "Balkon aanwezig? ja/nee": str,
-    "Tuin aanwezig? ja/nee": str,
-    "Douche aanwezig? ja/nee": str,
-    "Toilet aanwezig? ja/nee": str,
-    "Energielabel": str,
-    "Bergruimte aanwezig? ja/nee": str,
-    "Schuur/Berging aanwezig? ja/nee": str,
-    "Parkeergelegenheid aanwezig? ja/nee": str,
-    "Garage aanwezig? ja/nee": str  
-    }
+Respond with a JSON structure matching this JSON schema and if there are no results give 'na' as a return for strings:
+    {schema}
 """
 
 
@@ -80,9 +58,10 @@ def run(request_json: dict):
     if "description" not in request_json:
         return "No description in request", 400
 
-    prompt = PROMPT
     if "prompt" not in request_json:
         print("No prompt provided, using default")
+        schema = Path("../../data/schema.json").read_text()
+        prompt = PROMPT.format(schema=schema)
     else:
         prompt = request_json["prompt"]
 

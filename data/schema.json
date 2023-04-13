@@ -326,12 +326,26 @@
                 "type": "boolean"
               },
               "living_room_shape": {
-                "type": "string"
+                "type": "string",
+                "enum": [
+                  "t_room",
+                  "z_room",
+                  "u_room",
+                  "l_room"
+                ]
               },
               "living_room_characteristics": {
                 "type": "array",
                 "items": {
-                  "type": "string"
+                  "type": "string",
+                  "enum": [
+                    "room_en_suite",
+                    "former_en_suite",
+                    "through_room",
+                    "garden_room",
+                    "conservatory",
+                    "office"
+                  ]
                 }
               }
             },
@@ -353,7 +367,15 @@
                 "type": "boolean"
               },
               "type": {
-                "type": "string"
+                "type": "string",
+                "enum": [
+                  "front",
+                  "back",
+                  "side",
+                  "around",
+                  "patio_atrium",
+                  "communal"
+                ]
               },
               "orientation": {
                 "type": "string"
