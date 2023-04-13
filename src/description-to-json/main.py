@@ -5,7 +5,7 @@ from treehouse.security import SecretManager
 GOOGLE_PROJECT_ID = "techday-team-c"
 
 PROMPT = """
-Respond with this JSON structure and if there are no results give 'na' as a return for strings:
+Respond with this JSON structure and if there are no results give None as a response:
     {
     "Plaats": str,
     "Straat": str,
