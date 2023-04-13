@@ -1,0 +1,128 @@
+*, *:where(::before, ::after) {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    display: grid;
+    height: 100vh;
+    grid: auto 1fr auto/1fr;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+:root {
+    --p: 1rem;
+    --r: 4px;
+
+    --green-dark: hsl(135, 40%, 36%);
+    --green: hsl(144, 48%, 48%);
+}
+
+header,
+footer {
+    position: sticky;
+    background: white;
+    padding: var(--p);
+}
+
+header {
+    top: 0;
+}
+
+main {
+    display: grid;
+    grid: auto / repeat(auto-fit, minmax(360px, 1fr));
+    gap: calc(var(--p) * 1.5);
+    padding-inline: var(--p);
+    overflow: hidden;
+}
+
+label {
+    font-weight: bold;
+}
+
+form {
+    display: grid;
+    grid: auto 1fr auto auto/1fr;
+    gap: var(--p);
+}
+
+textarea {
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.tc {
+    font-weight: normal;
+    display: grid;
+    grid: auto / auto 1fr;
+    align-items: baseline;
+    gap: 1ch;
+    line-height: 1;
+}
+
+button {
+    all: unset;
+    display: inline-flex;
+    place-self: end ;
+    align-items: center;
+    gap: 1ch;
+    border-radius: var(--r);
+    font-weight: bold;
+    padding: 1ch var(--p);
+    background: var(--green-dark);
+    color: white;
+    cursor: pointer;
+}
+
+.phill {
+    display: inline-block;
+    height: calc(3rem - 2ch);
+    aspect-ratio: 1;
+}
+
+button:where(:hover, :focus) {
+    background: var(--green);
+}
+
+footer {
+    bottom: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+textarea,
+.code-container {
+    width: 100%;
+    max-height: 100%;
+    margin: 0 !important;
+    overflow: auto;
+    resize: none;
+    border-radius: var(--r);
+    padding: var(--p);
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.5);
+    backdrop-filter: blur(10px);
+    color: white;
+    display: grid;
+    gap: var(--p);
+    place-content: center;
+    justify-items: center;
+    transition: all 150ms;
+}
+
+.overlay[hidden] {
+    opacity: 0;
+    pointer-events: none;
+    background: transparent;
+    backdrop-filter: none;
+}
