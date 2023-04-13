@@ -1,0 +1,4 @@
+.DS_STORE
+.terraform*
+.editorconfig
+.vscode
