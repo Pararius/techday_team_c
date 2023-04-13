@@ -1,0 +1,288 @@
+{
+  "property": {
+    "property_type": "apartment",
+    "construction_year": 1975,
+    "function": "residential",
+    "building_form": "existing_build",
+    "measurements": {
+      "surface_area_livable": 145,
+      "surface_area_other": null,
+      "surface_area_building_related_outdoor": 25,
+      "surface_area_external_storage": 63,
+      "surface_area_total": 233,
+      "plot_size": null,
+      "volume": 460
+    },
+    "situations": [
+      "at calm road",
+      "in wooded area",
+      "near public transport",
+      "sheltered position",
+      "unobstructed view"
+    ],
+    "specifics": [
+      "accessible for seniors"
+    ],
+    "parkings": [
+      "bicycle",
+      "public"
+    ],
+    "maintenance": {
+      "interior": "good",
+      "exterior": "good"
+    },
+    "roof": {
+      "type": "flat",
+      "materials": [
+        "bitumen"
+      ]
+    },
+    "layout": {
+      "floors": 1
+    },
+    "facilities": [
+      "elevator"
+    ],
+    "kitchens": [
+      {
+        "dimensions": {
+          "length": 337,
+          "width": 230,
+          "surface_area": 77510
+        },
+        "installation_year": 2018,
+        "type": "closed",
+        "facilities": [
+          "built-in appliances"
+        ],
+        "cooktop_type": "gas"
+      }
+    ],
+    "living_rooms": [
+      {
+        "dimensions": {
+          "length": 626,
+          "width": 342,
+          "surface_area": 200000
+        },
+        "has_stairs": false,
+        "living_room_shape": "l_room",
+        "living_room_characteristics": [
+          "through_room"
+        ]
+      }
+    ],
+    "gardens": [
+      {
+        "main": true,
+        "type": "back",
+        "orientation": "se",
+        "dimensions": {
+          "length": 4438,
+          "width": 1145,
+          "surface_area": 350000
+        },
+        "quality": "regular",
+        "features": [
+          "terrace"
+        ],
+        "back_entrance": false
+      }
+    ],
+    "balconies": [
+      {
+        "orientation": "se",
+        "length": 156,
+        "width": 208,
+        "surface_area": 32448
+      }
+    ],
+    "roof_terraces": [
+      {
+        "orientation": "w",
+        "length": 295,
+        "width": 577,
+        "surface_area": 170215
+      }
+    ],
+    "storages": [
+      {
+        "placement": "detached",
+        "material": "stone",
+        "insulations": [
+          "full"
+        ],
+        "features": [
+          "electricity",
+          "heating",
+          "water"
+        ],
+        "length": 255,
+        "width": 254,
+        "surface_area": 64770
+      }
+    ],
+    "energy": {
+      "label": {
+        "class": "c",
+        "status": "definitive",
+        "performance": null,
+        "index": 1.41,
+        "expiration_date": "2025-10-20"
+      },
+      "insulations": [
+        "energy efficient glazing"
+      ],
+      "heatings": [
+        "central heating"
+      ],
+      "water_heatings": [
+        "central facility"
+      ],
+      "ventilations": [
+        "mechanical"
+      ],
+      "generators": [
+        "solar panels"
+      ],
+      "central_heating_boiler": {
+        "construction_year": 2019,
+        "make": "Remeha Tzerra HR",
+        "fuel": "gas",
+        "combination_boiler": true,
+        "property": "owned"
+      }
+    },
+    "garages": [
+      {
+        "type": "garage unit",
+        "car_capacity": 1,
+        "dimensions": {
+          "length": 600,
+          "width": 300,
+          "surface_area": 180000
+        },
+        "insulations": [
+          "roof",
+          "wall"
+        ],
+        "facilities": [
+          "electricity"
+        ]
+      }
+    ],
+    "bathrooms": [
+      {
+        "dimensions": {
+          "length": 1450,
+          "width": 1530,
+          "surface_area": 2218500
+        },
+        "facilities": [
+          "toilet",
+          "walk in shower"
+        ]
+      }
+    ],
+    "bedrooms": [
+      {
+        "dimensions": {
+          "length": 485,
+          "width": 355,
+          "surface_area": 172000
+        },
+        "suitable_as_bedroom": true
+      },
+      {
+        "dimensions": {
+          "length": 239,
+          "width": 375,
+          "surface_area": 89625
+        },
+        "suitable_as_bedroom": false
+      }
+    ],
+    "homeowners_association": {
+      "status": "professional management",
+      "administrator": "vve",
+      "monthly_contribution": "15100",
+      "chamber_of_commerce_registration": true,
+      "periodic_contribution": true,
+      "maintenance_plan": true,
+      "meetings": true,
+      "reserve_fund": true,
+      "home_insurance": true
+    },
+    "other_spaces": [
+      "scullery",
+      "toilet",
+      "wash place"
+    ],
+    "municipal_registration_allowed": true,
+    "permanent_residency_allowed": true,
+    "type": "porch flat",
+    "characteristic": "apartment",
+    "floor_number": 6,
+    "number_of_stories": 2,
+    "porch": {
+      "type": "closed",
+      "mailbox": true,
+      "doorbell_panel": true,
+      "intercom": true
+    }
+  },
+  "listing": {
+    "rent": {
+      "available": true,
+      "price_on_request": false,
+      "price": "235000",
+      "period": "monthly",
+      "deposit": "235000",
+      "interior": {
+        "type": "upholstered",
+        "partially_uphostered": null,
+        "optionally_furnished": true,
+        "costs_upholstery": "2000",
+        "costs_furnishing": "10000"
+      },
+      "additional_costs": {
+        "included": true,
+        "utility_costs": {
+          "costs_per_month": "14500",
+          "gas": true,
+          "water": true,
+          "electricity": true
+        },
+        "service_costs": {
+          "costs_per_month": "500",
+          "internet": true,
+          "tv": false,
+          "other": false
+        }
+      },
+      "contract": {
+        "temporary": false,
+        "minimum_duration": 12,
+        "maximum_duration": null,
+        "vat_taxed": false,
+        "yearly_indexed": false,
+        "maximum_yearly_indexation": null,
+        "availability": {
+          "status": "to rent",
+          "type": "per date",
+          "available_from": "2022-06-01"
+        },
+        "pets_allowed": false,
+        "smoking_allowed": false,
+        "sharing_possible": false
+      },
+      "tenant_requirements": {
+        "monthly_income": "400000",
+        "occupational_statuses": [
+          "employed"
+        ],
+        "maximum_number_of_tenants": 2
+      }
+    }
+  }
+}
