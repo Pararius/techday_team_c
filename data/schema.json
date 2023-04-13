@@ -1,0 +1,857 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "definitions": {
+    "Dimensions": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "orientation": {
+          "type": "string"
+        },
+        "length": {
+          "type": "integer"
+        },
+        "width": {
+          "type": "integer"
+        },
+        "surface_area": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "length",
+        "surface_area",
+        "width"
+      ]
+    }
+  },
+  "properties": {
+    "additionalProperties": false,
+    "property": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "property_type": {
+          "type": "string"
+        },
+        "construction_year": {
+          "type": "integer"
+        },
+        "function": {
+          "type": "string"
+        },
+        "building_form": {
+          "type": "string"
+        },
+        "measurements": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "surface_area_livable": {
+              "type": "integer"
+            },
+            "surface_area_other": {
+              "type": "null"
+            },
+            "surface_area_building_related_outdoor": {
+              "type": "integer"
+            },
+            "surface_area_external_storage": {
+              "type": "integer"
+            },
+            "surface_area_total": {
+              "type": "integer"
+            },
+            "plot_size": {
+              "type": "null"
+            },
+            "volume": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "plot_size",
+            "surface_area_building_related_outdoor",
+            "surface_area_external_storage",
+            "surface_area_livable",
+            "surface_area_other",
+            "surface_area_total",
+            "volume"
+          ]
+        },
+        "situations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "specifics": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "parkings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "maintenance": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "interior": {
+              "type": "string"
+            },
+            "exterior": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "exterior",
+            "interior"
+          ]
+        },
+        "roof": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "materials": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "materials",
+            "type"
+          ]
+        },
+        "layout": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "floors": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "floors"
+          ]
+        },
+        "facilities": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "kitchens": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "dimensions": {
+                "$ref": "#/definitions/Dimensions"
+              },
+              "installation_year": {
+                "type": "integer"
+              },
+              "type": {
+                "type": "string"
+              },
+              "facilities": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "cooktop_type": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "cooktop_type",
+              "dimensions",
+              "facilities",
+              "installation_year",
+              "type"
+            ]
+          }
+        },
+        "living_rooms": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "dimensions": {
+                "$ref": "#/definitions/Dimensions"
+              },
+              "has_stairs": {
+                "type": "boolean"
+              },
+              "living_room_shape": {
+                "type": "string"
+              },
+              "living_room_characteristics": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "dimensions",
+              "has_stairs",
+              "living_room_characteristics",
+              "living_room_shape"
+            ]
+          }
+        },
+        "gardens": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "main": {
+                "type": "boolean"
+              },
+              "type": {
+                "type": "string"
+              },
+              "orientation": {
+                "type": "string"
+              },
+              "dimensions": {
+                "$ref": "#/definitions/Dimensions"
+              },
+              "quality": {
+                "type": "string"
+              },
+              "features": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "back_entrance": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "back_entrance",
+              "dimensions",
+              "features",
+              "main",
+              "orientation",
+              "quality",
+              "type"
+            ]
+          }
+        },
+        "balconies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Dimensions"
+          }
+        },
+        "roof_terraces": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Dimensions"
+          }
+        },
+        "storages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "placement": {
+                "type": "string"
+              },
+              "material": {
+                "type": "string"
+              },
+              "insulations": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "features": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "length": {
+                "type": "integer"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "surface_area": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "features",
+              "insulations",
+              "length",
+              "material",
+              "placement",
+              "surface_area",
+              "width"
+            ]
+          }
+        },
+        "energy": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "label": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "class": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "string"
+                },
+                "performance": {
+                  "type": "null"
+                },
+                "index": {
+                  "type": "number"
+                },
+                "expiration_date": {
+                  "type": "string",
+                  "format": "date"
+                }
+              },
+              "required": [
+                "class",
+                "expiration_date",
+                "index",
+                "performance",
+                "status"
+              ]
+            },
+            "insulations": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "heatings": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "water_heatings": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "ventilations": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "generators": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "central_heating_boiler": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "construction_year": {
+                  "type": "integer"
+                },
+                "make": {
+                  "type": "string"
+                },
+                "fuel": {
+                  "type": "string"
+                },
+                "combination_boiler": {
+                  "type": "boolean"
+                },
+                "property": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "combination_boiler",
+                "construction_year",
+                "fuel",
+                "make",
+                "property"
+              ]
+            }
+          },
+          "required": [
+            "central_heating_boiler",
+            "generators",
+            "heatings",
+            "insulations",
+            "label",
+            "ventilations",
+            "water_heatings"
+          ]
+        },
+        "garages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "type": {
+                "type": "string"
+              },
+              "car_capacity": {
+                "type": "integer"
+              },
+              "dimensions": {
+                "$ref": "#/definitions/Dimensions"
+              },
+              "insulations": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "facilities": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "car_capacity",
+              "dimensions",
+              "facilities",
+              "insulations",
+              "type"
+            ]
+          }
+        },
+        "bathrooms": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "dimensions": {
+                "$ref": "#/definitions/Dimensions"
+              },
+              "facilities": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "dimensions",
+              "facilities"
+            ]
+          }
+        },
+        "bedrooms": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "dimensions": {
+                "$ref": "#/definitions/Dimensions"
+              },
+              "suitable_as_bedroom": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "dimensions",
+              "suitable_as_bedroom"
+            ]
+          }
+        },
+        "homeowners_association": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "status": {
+              "type": "string"
+            },
+            "administrator": {
+              "type": "string"
+            },
+            "monthly_contribution": {
+              "type": "string",
+              "format": "integer"
+            },
+            "chamber_of_commerce_registration": {
+              "type": "boolean"
+            },
+            "periodic_contribution": {
+              "type": "boolean"
+            },
+            "maintenance_plan": {
+              "type": "boolean"
+            },
+            "meetings": {
+              "type": "boolean"
+            },
+            "reserve_fund": {
+              "type": "boolean"
+            },
+            "home_insurance": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "administrator",
+            "chamber_of_commerce_registration",
+            "home_insurance",
+            "maintenance_plan",
+            "meetings",
+            "monthly_contribution",
+            "periodic_contribution",
+            "reserve_fund",
+            "status"
+          ]
+        },
+        "other_spaces": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "municipal_registration_allowed": {
+          "type": "boolean"
+        },
+        "permanent_residency_allowed": {
+          "type": "boolean"
+        },
+        "type": {
+          "type": "string"
+        },
+        "characteristic": {
+          "type": "string"
+        },
+        "floor_number": {
+          "type": "integer"
+        },
+        "number_of_stories": {
+          "type": "integer"
+        },
+        "porch": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "mailbox": {
+              "type": "boolean"
+            },
+            "doorbell_panel": {
+              "type": "boolean"
+            },
+            "intercom": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "doorbell_panel",
+            "intercom",
+            "mailbox",
+            "type"
+          ]
+        }
+      },
+      "required": [
+        "balconies",
+        "bathrooms",
+        "bedrooms",
+        "building_form",
+        "characteristic",
+        "construction_year",
+        "energy",
+        "facilities",
+        "floor_number",
+        "function",
+        "garages",
+        "gardens",
+        "homeowners_association",
+        "kitchens",
+        "layout",
+        "living_rooms",
+        "maintenance",
+        "measurements",
+        "municipal_registration_allowed",
+        "number_of_stories",
+        "other_spaces",
+        "parkings",
+        "permanent_residency_allowed",
+        "porch",
+        "property_type",
+        "roof",
+        "roof_terraces",
+        "situations",
+        "specifics",
+        "storages",
+        "type"
+      ]
+    },
+    "listing": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "rent": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "available": {
+              "type": "boolean"
+            },
+            "price_on_request": {
+              "type": "boolean"
+            },
+            "price": {
+              "type": "string",
+              "format": "integer"
+            },
+            "period": {
+              "type": "string"
+            },
+            "deposit": {
+              "type": "string",
+              "format": "integer"
+            },
+            "interior": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "partially_uphostered": {
+                  "type": "null"
+                },
+                "optionally_furnished": {
+                  "type": "boolean"
+                },
+                "costs_upholstery": {
+                  "type": "string",
+                  "format": "integer"
+                },
+                "costs_furnishing": {
+                  "type": "string",
+                  "format": "integer"
+                }
+              },
+              "required": [
+                "costs_furnishing",
+                "costs_upholstery",
+                "optionally_furnished",
+                "partially_uphostered",
+                "type"
+              ]
+            },
+            "additional_costs": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "included": {
+                  "type": "boolean"
+                },
+                "utility_costs": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "costs_per_month": {
+                      "type": "string",
+                      "format": "integer"
+                    },
+                    "gas": {
+                      "type": "boolean"
+                    },
+                    "water": {
+                      "type": "boolean"
+                    },
+                    "electricity": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "costs_per_month",
+                    "electricity",
+                    "gas",
+                    "water"
+                  ]
+                },
+                "service_costs": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "costs_per_month": {
+                      "type": "string",
+                      "format": "integer"
+                    },
+                    "internet": {
+                      "type": "boolean"
+                    },
+                    "tv": {
+                      "type": "boolean"
+                    },
+                    "other": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "costs_per_month",
+                    "internet",
+                    "other",
+                    "tv"
+                  ]
+                }
+              },
+              "required": [
+                "included",
+                "service_costs",
+                "utility_costs"
+              ]
+            },
+            "contract": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "temporary": {
+                  "type": "boolean"
+                },
+                "minimum_duration": {
+                  "type": "integer"
+                },
+                "maximum_duration": {
+                  "type": "null"
+                },
+                "vat_taxed": {
+                  "type": "boolean"
+                },
+                "yearly_indexed": {
+                  "type": "boolean"
+                },
+                "maximum_yearly_indexation": {
+                  "type": "null"
+                },
+                "availability": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    },
+                    "available_from": {
+                      "type": "string",
+                      "format": "date"
+                    }
+                  },
+                  "required": [
+                    "available_from",
+                    "status",
+                    "type"
+                  ]
+                },
+                "pets_allowed": {
+                  "type": "boolean"
+                },
+                "smoking_allowed": {
+                  "type": "boolean"
+                },
+                "sharing_possible": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "availability",
+                "maximum_duration",
+                "maximum_yearly_indexation",
+                "minimum_duration",
+                "pets_allowed",
+                "sharing_possible",
+                "smoking_allowed",
+                "temporary",
+                "vat_taxed",
+                "yearly_indexed"
+              ]
+            },
+            "tenant_requirements": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "monthly_income": {
+                  "type": "string",
+                  "format": "integer"
+                },
+                "occupational_statuses": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "maximum_number_of_tenants": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "maximum_number_of_tenants",
+                "monthly_income",
+                "occupational_statuses"
+              ]
+            }
+          },
+          "required": [
+            "additional_costs",
+            "available",
+            "contract",
+            "deposit",
+            "interior",
+            "period",
+            "price",
+            "price_on_request",
+            "tenant_requirements"
+          ]
+        }
+      },
+      "required": [
+        "rent"
+      ]
+    }
+  },
+  "required": [
+    "listing",
+    "property"
+  ]
+}
