@@ -131,8 +131,13 @@ dialog {
   padding: var(--p);
 }
 
+dialog::backdrop {
+  background: rgba(0,0,0,.5);
+  backdrop-filter: blur(10px);
+}
+
 .output-form {
-  min-width: 45ch;
+  min-width: 70ch;
   display: grid;
   grid: auto / auto 1fr;
   gap: 1rem 1ch;
@@ -145,4 +150,9 @@ dialog {
 .form-row input {
   font-size: 1rem;
   padding: .5ch;
+}
+
+.form-row textarea {
+  grid-column: 1/-1;
+  height: 15rem;
 }

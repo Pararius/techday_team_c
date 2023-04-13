@@ -113,8 +113,8 @@ const generateForm = (string) => {
   const dialog = document.querySelector('dialog');
   const form = document.createElement('form');
   form.className = 'output-form';
-  const obj = JSON.parse(string.split('---')[0]);
-  for (const [key, {label, value}] of Object.entries(obj)) {
+  const [obj, description] = string.split('---');
+  for (const [key, {label, value}] of Object.entries(JSON.parse(obj))) {
     form.insertAdjacentHTML('beforeend',`
       <div class="form-row">
         <label for="${key}">${label}</label>
@@ -122,6 +122,12 @@ const generateForm = (string) => {
       </div>
     `);
   }
+  form.insertAdjacentHTML('beforeend',`
+      <div class="form-row">
+        <label for="description">Omschrijving</label>
+        <textarea>${description}</textarea>
+      </div>
+    `);
   dialog.innerHTML = '';
   dialog.insertAdjacentElement('afterbegin', form);
   dialog.showModal();
