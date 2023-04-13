@@ -37,7 +37,7 @@ form.addEventListener('submit', (event) => {
         })
 })
 
-pickIndex = (array) => Math.floor(Math.random() * array.length);
+const pickIndex = (array) => Math.floor(Math.random() * array.length);
 
 const overlayStatus = () => {
     const messages = [
