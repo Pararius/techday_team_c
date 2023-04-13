@@ -14,13 +14,16 @@ form.addEventListener('submit', (event) => {
         return;
     }
     overlay.hidden = false;
-    abortController = new AbortController()
+    abortController = new AbortController();
+    const fd = new FormData();
+    fd.append('description', description);
     fetch(endpoint, {
         signal: abortController.signal,
         method: 'POST',
-        body: {
-            description,
+        headers: {
+          'X-Requested-With': 'XMLHttpRequest',
         },
+        body: fd,
     })
         .then(res => res.json())
         .then(json => {
