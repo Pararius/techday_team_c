@@ -1,2 +1,2 @@
 openai
-google-cloud-secretmanager
+google-cloud-secret-manager
