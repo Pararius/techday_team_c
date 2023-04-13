@@ -13,21 +13,21 @@ form.addEventListener('submit', (event) => {
     if (!description || endpoint === window.location.href) {
         return;
     }
+  console.log(JSON.stringify({description}))
     overlay.hidden = false;
     abortController = new AbortController();
-    const fd = new FormData();
-    fd.append('description', description);
     fetch(endpoint, {
         signal: abortController.signal,
         method: 'POST',
         headers: {
           'X-Requested-With': 'XMLHttpRequest',
+          'Content-Type': 'application/json',
         },
-        body: fd,
+        body: JSON.stringify({description}),
     })
-        .then(res => res.json())
-        .then(json => {
-            showResponse(json);
+        .then(res => res.text())
+        .then(txt => {
+            showResponse(txt);
         })
         .catch(err => {
             console.error(err);
@@ -48,6 +48,9 @@ const overlayStatus = () => {
         'Taking over jobs',
         'Secretly reading your emails',
         'Asking a guy I went to school with',
+        'Tokenizing thingamajigs',
+        'Parsing description',
+        'Taking a break',
     ]
 
     let currentIndex;
