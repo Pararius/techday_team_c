@@ -52,6 +52,8 @@ resource "google_cloudfunctions_function" "descr-to-json-function" {
   description = "Extract info from description using GPT"
   runtime     = "python310"
 
+  service_account_email = google_service_account.cloud_function_runner.email
+
   available_memory_mb   = 512
   source_archive_bucket = google_storage_bucket.code-bucket.name
   source_archive_object = google_storage_bucket_object.descr-to-json-archive.name
@@ -61,6 +63,26 @@ resource "google_cloudfunctions_function" "descr-to-json-function" {
   depends_on = [
     data.archive_file.descr-to-json-source
   ]
+}
+
+// Generic SA for Cloud Functions
+resource "google_service_account" "cloud_function_runner" {
+  project      = var.google_cloud_project_id
+  account_id   = "cf-runner"
+  display_name = "cf-runner"
+}
+
+resource "google_project_iam_member" "cloud_function_runner_roles" {
+  for_each = toset([
+    "roles/cloudfunctions.invoker",
+    "roles/iam.serviceAccountUser",
+    "roles/secretmanager.secretAccessor",
+    "roles/storage.objectCreator",
+    "roles/storage.objectViewer",
+  ])
+  role    = each.key
+  member  = "serviceAccount:${google_service_account.cloud_function_runner.email}"
+  project = var.google_cloud_project_id
 }
 
 # IAM entry for all users to invoke the function
