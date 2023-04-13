@@ -1,6 +1,6 @@
 import openai
 import json
-from treehouse.utils import SecretManager
+from treehouse.security import SecretManager
 
 GOOGLE_PROJECT_ID = "techday-team-c"
 
@@ -12,7 +12,7 @@ def get_features_from_description(description:str, prompt:str) -> dict:
     openai.api_key = gpt_api_key
 
     # Call openai to get stuff from description
-    completion = openai.Completion.create(model="gpt-3.5-turbo", prompt=prompt)
+    completion = openai.Completion.create(model="text-davinci-003", prompt=prompt)
 
     # print the completion
     print(completion.choices[0].text)
@@ -34,12 +34,13 @@ def handler(request):
     else:
         prompt = request_json["prompt"]             
 
-    print(f"Starting with description: {request_json["description"][0:150]}")
+    print(f'Starting with description: {request_json["description"][0:150]}')
 
     listing_data = get_features_from_description(
         description=request_json["description"], 
         prompt=prompt)
 
+    print("Result:")
     print(listing_data)
 
     return json.dumps(listing_data), 200

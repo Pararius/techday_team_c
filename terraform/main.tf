@@ -57,6 +57,10 @@ resource "google_cloudfunctions_function" "descr-to-json-function" {
   source_archive_object = google_storage_bucket_object.descr-to-json-archive.name
   trigger_http          = true
   entry_point           = "handler"
+
+  depends_on = [
+    data.archive_file.descr-to-json-source
+  ]
 }
 
 # IAM entry for all users to invoke the function
